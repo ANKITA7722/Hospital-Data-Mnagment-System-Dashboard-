@@ -1,18 +1,32 @@
-import { Outlet } from "react-router-dom";
-import UserRegistration from "./component/Foms/UserRegistration";
-import AdminLogin from "./admin/adminLogin";
+// import React from "react";
+// import { Outlet } from "react-router-dom";
 
 
+// import "./css/Layout.css"
+// import Sidebar from "./Dashboard/Sidebar";
+// import Header from "./Dashboard/Header";
 
+// const Layout = () => {
+//   return (
+//     <div className="layout-container">
+//       {/* Sidebar */}
+//       <aside className="sidebar">
+//         <Sidebar />
+//       </aside>
 
-const Layout=()=>{
-    return(
-    <>
-     <AdminLogin/>
-     <UserRegistration/>
-     <Outlet/>
-    </>
-    )
+//       {/* Right Side (Header + Content) */}
+//       <div className="main-content">
+//         <header className="header">
+//           <Header/>
+//         </header>
 
-}
-export default Layout;
+//         {/* Changing Content */}
+//         <div className="page-content">
+//           <Outlet />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Layout;
