@@ -1,0 +1,55 @@
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content:flex-end;
+  align-items:end;
+  margin-top: 15px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: none;
+  background: #acbccd;
+  color: rgb(13, 1, 1);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 700;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .profile-box,
+  .table-container {
+    padding: 15px;
+  }
+
+  table th, table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
