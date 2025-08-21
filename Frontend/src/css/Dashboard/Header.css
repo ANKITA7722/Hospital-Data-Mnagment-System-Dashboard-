@@ -97,19 +97,30 @@
   }
 }
 */
+.body{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+/*}
+  */
 
-.dashboard-header {
+  .dashboard-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* left-right equal spacing */
   align-items: center;
   background: #2c3e50;
   padding: 12px 20px;
   color: white;
-  position:sticky;
+  position: sticky;
   top: 0;
   z-index: 1100;
   margin-bottom: 20px;
+  width: 100%;           /* full width header */
+  box-sizing: border-box; /* padding included in width */
+  gap: 15px;             /* content ke beech thoda gap */
 }
+
 
 .header-left {
   display: flex;

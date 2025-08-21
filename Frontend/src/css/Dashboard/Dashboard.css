@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 .dashboard-container {
-  margin-left: 250px;   /* Sidebar ki width ke barabar margin */
+  margin-top:0%;
+  /* margin-left: 250px;   Sidebar ki width ke barabar margin */
   /* padding: 20px; */
-  width: calc(100% - 250px);;
+  /* width: calc(100% - 250px); */
   min-height: 100vh;
   background: #f4f6f9;
 }
@@ -14,7 +15,7 @@
 /* Main Content */
 .main-content {
   flex: 1;
-  padding: 20px;
+  /* padding: 20px; */
   transition: margin-left 0.3s ease;
 }
 
