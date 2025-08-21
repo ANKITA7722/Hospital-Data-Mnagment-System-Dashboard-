@@ -3,11 +3,15 @@ import Sidebar from "./Sidebar";
 import Header from "./Header";
 import UsersTable from "./UsersTable";
 import "../css/Dashboard/Dashboard.css";
+import AdminProfile from "../admin/AdminProfile";
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [users, setUsers] = useState([]);
-  const adminName = "Admin"; // You can make this dynamic
+  // const adminName = "Admin"; // You can make this dynamic
+
+  const [adminName, setAdminName] = useState("Admin User"); // ✅ login ke baad set hoga
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     // Fetch users from JSON
@@ -17,9 +21,18 @@ const Dashboard = () => {
       .catch((err) => console.error(err));
   }, []);
 
+  // const handleLogout = () => {
+  //   window.location.href = "/admin-login";
+  // };
+
   const handleLogout = () => {
-    window.location.href = "/admin-login";
+    setAdminName(""); // ✅ logout hone par naam hatao
+    setMessage("Admin logged out successfully!");
+    sessionStorage.removeItem("admin"); // ✅ session clear
+
+    setTimeout(() => setMessage(""), 3000); // ✅ 3 sec baad message hide
   };
+
 
 
   const toggleSidebar = () => {
@@ -48,6 +61,11 @@ const Dashboard = () => {
         <UsersTable users={users} />
         
       </div>
+
+      <div>
+      <AdminProfile adminName={adminName} onLogout={handleLogout} />
+      {message && <p style={{ color: "green", textAlign: "center" }}>{message}</p>}
+    </div>
     </div>
   );
 };

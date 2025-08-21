@@ -47,20 +47,24 @@ import Dashboard from "./Dashboard/Dashboard";
 import UserRegistration from "./component/Foms/UserRegistration";
 import UsersTable from "./Dashboard/UsersTable";
 import Layout from "./Layout"; // Layout includes Sidebar + Header + Outlet
+import AdminLogin from "./admin/adminLogin";
+import AdminProfile from "./admin/AdminProfile";
+
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        {/* Layout as parent route */}
+        {/* Routes outside Layout (No sidebar/header) */}
+        <Route path="/admin-login" element={<AdminLogin />} />
+        <Route path="/admin-profile" element={<AdminProfile />} />
+
+        {/* Routes with Layout (includes Sidebar + Header) */}
         <Route path="/" element={<Layout />}>
-          {/* Default index route */}
           <Route index element={<Dashboard />} />
-          {/* Other pages */}
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="userregistration" element={<UserRegistration />} />
           <Route path="usertable" element={<UsersTable />} />
-          {/* Fallback */}
           <Route path="*" element={<p>Page Not Found</p>} />
         </Route>
       </Routes>
@@ -69,4 +73,5 @@ const App = () => {
 };
 
 export default App;
+
 

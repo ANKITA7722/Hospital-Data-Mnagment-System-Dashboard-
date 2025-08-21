@@ -109,11 +109,21 @@
       "dob": "2025-08-15",
       "branch": "Ashoka Garden",
       "cast": "Other"
+    },
+    {
+      "id": "837b",
+      "name": "manisha",
+      "gender": "Female",
+      "email": "manish12@gmail.com",
+      "mobile": "1234567801",
+      "dob": "2025-08-29",
+      "branch": "Awadh Puri",
+      "cast": "Buddhist"
     }
   ],
   "admins": [
     {
-      "id": 1,
+      "id": "1",
       "admin": "admin",
       "password": "admin@123"
     }
